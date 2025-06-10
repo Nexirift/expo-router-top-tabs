@@ -5,9 +5,7 @@
 
 A material design top tabs navigator with collapsible header support for [Expo Router v5](https://docs.expo.dev/router/introduction/). This package integrates `react-native-collapsible-tab-view` with Expo Router, providing a seamless way to implement collapsible headers in your tab-based navigation.
 
-<p align="center">
-  <img src="https://github.com/Nexirift/expo-router-top-tabs/raw/main/assets/demo.gif" alt="Demo GIF" width="300">
-</p>
+*Tested with Expo SDK v53.0.11, Expo Router v5.0.7, and React Native v0.79.3.*
 
 ## Features
 
@@ -67,23 +65,23 @@ export default function TabsLayout() {
         </View>
       </TopTabs.Header>
 
-      <TopTabs.Screen 
-        name="home" 
-        options={{ 
+      <TopTabs.Screen
+        name="home"
+        options={{
           title: "Home"
-        }} 
+        }}
       />
-      <TopTabs.Screen 
-        name="profile" 
-        options={{ 
-          title: "Profile" 
-        }} 
+      <TopTabs.Screen
+        name="profile"
+        options={{
+          title: "Profile"
+        }}
       />
-      <TopTabs.Screen 
-        name="settings" 
-        options={{ 
-          title: "Settings" 
-        }} 
+      <TopTabs.Screen
+        name="settings"
+        options={{
+          title: "Settings"
+        }}
       />
     </TopTabs>
   );
@@ -119,8 +117,8 @@ export default function HomeScreen() {
   const scrollProps = useScrollProps();
 
   return (
-    <Animated.ScrollView 
-      {...scrollProps} 
+    <Animated.ScrollView
+      {...scrollProps}
       contentContainerStyle={styles.content}
     >
       {[...Array(30)].map((_, i) => (
@@ -209,11 +207,11 @@ TopTabs supports protected routes, consistent with Expo Router's conventions:
 ```tsx
 <TopTabs>
   <TopTabs.Header>{/* ... */}</TopTabs.Header>
-  
+
   {/* Public routes */}
   <TopTabs.Screen name="home" />
   <TopTabs.Screen name="discover" />
-  
+
   {/* Protected routes (prefixed with _) */}
   <TopTabs.Screen name="_profile" />
   <TopTabs.Screen name="_settings" />
@@ -233,7 +231,7 @@ const AnimatedFlatList = Animated.createAnimatedComponent(FlatList);
 
 export default function MyScreen() {
   const scrollProps = useScrollProps();
-  
+
   return (
     <AnimatedFlatList
       {...scrollProps}

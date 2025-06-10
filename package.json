@@ -1,8 +1,9 @@
 {
-  "name": "@bacons/expo-router-top-tabs",
-  "version": "1.0.0",
-  "description": "Top tabs with optional header in Expo Router",
+  "name": "@nexirift/expo-router-top-tabs",
+  "version": "1.0.1",
+  "description": "Top tabs component for Expo Router with an optional header!",
   "main": "build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
     "build": "expo-module build",
     "clean": "expo-module clean",
@@ -12,32 +13,39 @@
     "prepublishOnly": "expo-module prepublishOnly",
     "expo-module": "expo-module"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/evanbacon/expo-router-top-tabs.git"
-  },
-  "peerDependencies": {
-    "react-native": "*",
-    "react-native-reanimated": "^3.14.0",
-    "expo-router": "^3.5.18"
-  },
   "keywords": [
-    "expo-router",
     "react-native",
-    "react-native-web",
-    "typescript"
+    "expo",
+    "expo-router",
+    "react-native-collapsible-tab-view",
+    "react-native-pager-view",
+    "top-tabs",
+    "navigation"
   ],
-  "author": "Evan Bacon",
+  "repository": "https://github.com/Nexirift/expo-router-top-tabs",
+  "bugs": {
+    "url": "https://github.com/Nexirift/expo-router-top-tabs/issues"
+  },
+  "author": "Nexirift",
   "license": "MIT",
+  "homepage": "https://github.com/Nexirift/expo-router-top-tabs#readme",
   "dependencies": {
+    "@react-navigation/material-top-tabs": "^7.2.14",
     "react-native-collapsible-tab-view": "2.0.2",
-    "@react-navigation/material-top-tabs": "6.3.0",
-    "react-native-pager-view": "6.0.1",
-    "react-native-tab-view": "^3.3.0"
+    "react-native-pager-view": "^6.7.1"
   },
   "devDependencies": {
-    "expo-router": "^3.5.18",
-    "expo-module-scripts": "^3.5.2",
-    "react-native": "^0.74.3"
+    "@types/react": "~19.0.0",
+    "expo": "~53.0.0",
+    "expo-module-scripts": "^4.1.7",
+    "react-native": ">=0.79.0",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "expo": ">=53.0.0",
+    "react": ">=19.0.0",
+    "react-native": ">=0.79.0",
+    "react-native-reanimated": ">=3.17.0",
+    "expo-router": ">=5.0.0"
   }
 }
